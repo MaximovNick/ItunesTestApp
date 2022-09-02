@@ -9,21 +9,21 @@
 /* Begin PBXBuildFile section */
 		AD40BA3928C2022100B191B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA3828C2022100B191B0 /* AppDelegate.swift */; };
 		AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */; };
-		AD40BA3D28C2022100B191B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA3C28C2022100B191B0 /* ViewController.swift */; };
-		AD40BA4028C2022100B191B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40BA3E28C2022100B191B0 /* Main.storyboard */; };
 		AD40BA4228C2022200B191B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD40BA4128C2022200B191B0 /* Assets.xcassets */; };
 		AD40BA4528C2022200B191B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */; };
+		AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA4C28C2028700B191B0 /* AuthViewController.swift */; };
+		AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		AD40BA3528C2022100B191B0 /* ItunesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD40BA3828C2022100B191B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AD40BA3C28C2022100B191B0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		AD40BA3F28C2022100B191B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD40BA4128C2022200B191B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD40BA4428C2022200B191B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD40BA4628C2022200B191B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD40BA4C28C2028700B191B0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +56,39 @@
 		AD40BA3728C2022100B191B0 /* ItunesApp */ = {
 			isa = PBXGroup;
 			children = (
-				AD40BA3828C2022100B191B0 /* AppDelegate.swift */,
-				AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */,
-				AD40BA3C28C2022100B191B0 /* ViewController.swift */,
-				AD40BA3E28C2022100B191B0 /* Main.storyboard */,
+				AD40BA4F28C2135300B191B0 /* Extensions */,
+				AD40BA4E28C202EC00B191B0 /* Application */,
+				AD40BA4C28C2028700B191B0 /* AuthViewController.swift */,
 				AD40BA4128C2022200B191B0 /* Assets.xcassets */,
 				AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */,
 				AD40BA4628C2022200B191B0 /* Info.plist */,
 			);
 			path = ItunesApp;
+			sourceTree = "<group>";
+		};
+		AD40BA4E28C202EC00B191B0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				AD40BA3828C2022100B191B0 /* AppDelegate.swift */,
+				AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		AD40BA4F28C2135300B191B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD40BA5028C2136F00B191B0 /* UIKit */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AD40BA5028C2136F00B191B0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +151,6 @@
 			files = (
 				AD40BA4528C2022200B191B0 /* LaunchScreen.storyboard in Resources */,
 				AD40BA4228C2022200B191B0 /* Assets.xcassets in Resources */,
-				AD40BA4028C2022100B191B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +161,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD40BA3D28C2022100B191B0 /* ViewController.swift in Sources */,
 				AD40BA3928C2022100B191B0 /* AppDelegate.swift in Sources */,
+				AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */,
 				AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */,
+				AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		AD40BA3E28C2022100B191B0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD40BA3F28C2022100B191B0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +308,7 @@
 				INFOPLIST_FILE = ItunesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -304,7 +320,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +336,7 @@
 				INFOPLIST_FILE = ItunesApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -332,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
