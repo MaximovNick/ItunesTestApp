@@ -10,20 +10,20 @@ import UIKit
 class AuthViewController: UIViewController {
     
     private let scrollView: UIScrollView = {
-       let scrollView = UIScrollView()
+        let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
     private let backgroundView: UIView = {
-       let view = UIView()
+        let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
     private let loginLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "LogIn"
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -51,7 +51,7 @@ class AuthViewController: UIViewController {
         button.setTitle("SignUp", for: .normal)
         button.layer.cornerRadius = 10
         button.tintColor = .white
-        button.addTarget(AuthViewController.self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -62,7 +62,7 @@ class AuthViewController: UIViewController {
         button.setTitle("SignIn", for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 10
-        button.addTarget(AuthViewController.self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -72,7 +72,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupViews()
         setupDelegate()
         setConstraints()
@@ -105,19 +105,20 @@ class AuthViewController: UIViewController {
     }
     
     @objc func signUpButtonTapped() {
-
-        print("signUp")
+                let signUPViewController = SignUpViewController()
+                self.present(signUPViewController, animated: true)
     }
     
     @objc func signInButtonTapped() {
-
-        print("signIn")
+        //        let navigationVC = UINavigationController(rootViewController: AlbumsViewController())
+        //        navigationVC.modalPresentationStyle = .fullScreen
+        //        self.present(navigationVC, animated: true)
     }
 }
 
 // MARK: - UITextFieldDelegate
 extension AuthViewController: UITextFieldDelegate {
-
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         emailTextField.resignFirstResponder()
         passwordTextField.resignFirstResponder()

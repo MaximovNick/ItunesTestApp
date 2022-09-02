@@ -13,6 +13,7 @@
 		AD40BA4528C2022200B191B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */; };
 		AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA4C28C2028700B191B0 /* AuthViewController.swift */; };
 		AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */; };
+		AD40BA5528C221EF00B191B0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		AD40BA4628C2022200B191B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD40BA4C28C2028700B191B0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,7 @@
 			children = (
 				AD40BA4F28C2135300B191B0 /* Extensions */,
 				AD40BA4E28C202EC00B191B0 /* Application */,
-				AD40BA4C28C2028700B191B0 /* AuthViewController.swift */,
+				AD40BA5328C221D200B191B0 /* Controllers */,
 				AD40BA4128C2022200B191B0 /* Assets.xcassets */,
 				AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */,
 				AD40BA4628C2022200B191B0 /* Info.plist */,
@@ -89,6 +91,15 @@
 				AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		AD40BA5328C221D200B191B0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AD40BA4C28C2028700B191B0 /* AuthViewController.swift */,
+				AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +176,7 @@
 				AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */,
 				AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */,
 				AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */,
+				AD40BA5528C221EF00B191B0 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
