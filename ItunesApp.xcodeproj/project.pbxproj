@@ -14,6 +14,12 @@
 		AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA4C28C2028700B191B0 /* AuthViewController.swift */; };
 		AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */; };
 		AD40BA5528C221EF00B191B0 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */; };
+		AD40BA5728C24D6C00B191B0 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5628C24D6C00B191B0 /* AlbumsViewController.swift */; };
+		AD40BA5928C2505A00B191B0 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5828C2505A00B191B0 /* UIViewController + Extension.swift */; };
+		AD40BA5C28C254A100B191B0 /* AlbumsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5B28C254A100B191B0 /* AlbumsTableViewCell.swift */; };
+		AD40BA5E28C25C5A00B191B0 /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5D28C25C5A00B191B0 /* DetailAlbumViewController.swift */; };
+		AD40BA6028C2664F00B191B0 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */; };
+		AD40BA6228C2690C00B191B0 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA6128C2690C00B191B0 /* UserInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		AD40BA4C28C2028700B191B0 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AD40BA5628C24D6C00B191B0 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
+		AD40BA5828C2505A00B191B0 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
+		AD40BA5B28C254A100B191B0 /* AlbumsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsTableViewCell.swift; sourceTree = "<group>"; };
+		AD40BA5D28C25C5A00B191B0 /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
+		AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
+		AD40BA6128C2690C00B191B0 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				AD40BA5128C2139E00B191B0 /* UIStackView + Extension.swift */,
+				AD40BA5828C2505A00B191B0 /* UIViewController + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -96,10 +109,23 @@
 		AD40BA5328C221D200B191B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				AD40BA5A28C2547100B191B0 /* Cells */,
 				AD40BA4C28C2028700B191B0 /* AuthViewController.swift */,
 				AD40BA5428C221EF00B191B0 /* SignUpViewController.swift */,
+				AD40BA5628C24D6C00B191B0 /* AlbumsViewController.swift */,
+				AD40BA5D28C25C5A00B191B0 /* DetailAlbumViewController.swift */,
+				AD40BA6128C2690C00B191B0 /* UserInfoViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AD40BA5A28C2547100B191B0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AD40BA5B28C254A100B191B0 /* AlbumsTableViewCell.swift */,
+				AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +200,12 @@
 			files = (
 				AD40BA3928C2022100B191B0 /* AppDelegate.swift in Sources */,
 				AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */,
+				AD40BA5728C24D6C00B191B0 /* AlbumsViewController.swift in Sources */,
+				AD40BA6028C2664F00B191B0 /* SongsCollectionViewCell.swift in Sources */,
+				AD40BA5C28C254A100B191B0 /* AlbumsTableViewCell.swift in Sources */,
+				AD40BA6228C2690C00B191B0 /* UserInfoViewController.swift in Sources */,
+				AD40BA5E28C25C5A00B191B0 /* DetailAlbumViewController.swift in Sources */,
+				AD40BA5928C2505A00B191B0 /* UIViewController + Extension.swift in Sources */,
 				AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */,
 				AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */,
 				AD40BA5528C221EF00B191B0 /* SignUpViewController.swift in Sources */,
