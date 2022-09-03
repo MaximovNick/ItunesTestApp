@@ -9,42 +9,42 @@ import UIKit
 
 class UserInfoViewController: UIViewController {
     
-    private lazy var firstNameLabel: UILabel = {
+    private var firstNameLabel: UILabel = {
         let label = UILabel()
         label.text = "First name"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var secondNameLabel: UILabel = {
+    private var secondNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Second name"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var ageLabel: UILabel = {
+    private var ageLabel: UILabel = {
         let label = UILabel()
         label.text = "Age"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var phoneLabel: UILabel = {
+    private var phoneLabel: UILabel = {
         let label = UILabel()
         label.text = "Phone"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var emailLabel: UILabel = {
+    private var emailLabel: UILabel = {
         let label = UILabel()
         label.text = "Email"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var passwordLabel: UILabel = {
+    private var passwordLabel: UILabel = {
         let label = UILabel()
         label.text = "Password"
         label.translatesAutoresizingMaskIntoConstraints = false

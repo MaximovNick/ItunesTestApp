@@ -9,7 +9,7 @@ import UIKit
 
 class AlbumsViewController: UIViewController {
     
-    private lazy var tableView: UITableView = {
+    private var tableView: UITableView = {
         let tableView = UITableView()
         tableView.backgroundColor = .white
         tableView.register(AlbumsTableViewCell.self, forCellReuseIdentifier: "cell")
@@ -17,7 +17,7 @@ class AlbumsViewController: UIViewController {
         return tableView
     }()
     
-    private lazy var searchController = UISearchController(searchResultsController: nil)
+    private var searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()

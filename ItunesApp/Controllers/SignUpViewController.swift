@@ -9,34 +9,34 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
-    private lazy var scrollView: UIScrollView = {
+    private var scrollView: UIScrollView = {
         let scrollView = UIScrollView()
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         return scrollView
     }()
     
-    private lazy var backgroundView: UIView = {
+    private var backgroundView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    private lazy var loginLabel: UILabel = {
+    private var loginLabel: UILabel = {
         let label = UILabel()
         label.text = "Registration"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    private lazy var firstNameTextField: UITextField = {
+    private var firstNameTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "First Name"
         return textField
     }()
     
-    private lazy var firstNameValidLabel: UILabel = {
+    private var firstNameValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required filed"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -44,14 +44,14 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var secondNameTextField: UITextField = {
+    private var secondNameTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Second Name"
         return textField
     }()
     
-    private lazy var secondNameValidLabel: UILabel = {
+    private var secondNameValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required field"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var ageValidLabel: UILabel = {
+    private var ageValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required field"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -67,7 +67,7 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var phoneNumberTextField: UITextField = {
+    private var phoneNumberTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "Phone"
@@ -75,7 +75,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private lazy var phoneValidLabel: UILabel = {
+    private var phoneValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required field"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -83,14 +83,14 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var emailTextField: UITextField = {
+    private var emailTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.placeholder = "E-mail"
         return textField
     }()
     
-    private lazy var emailValidLabel: UILabel = {
+    private var emailValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required field"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -98,7 +98,7 @@ class SignUpViewController: UIViewController {
         return label
     }()
     
-    private lazy var passwordTextField: UITextField = {
+    private var passwordTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
         textField.isSecureTextEntry = true
@@ -106,7 +106,7 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private lazy var passwordValidLabel: UILabel = {
+    private var passwordValidLabel: UILabel = {
         let label = UILabel()
         label.text = "Required field"
         label.font = UIFont.systemFont(ofSize: 14)
@@ -125,8 +125,8 @@ class SignUpViewController: UIViewController {
         return button
     }()
     
-    private lazy var elementsStackView = UIStackView()
-    private lazy var datePicker = UIDatePicker()
+    private var elementsStackView = UIStackView()
+    private var datePicker = UIDatePicker()
     
     override func viewDidLoad() {
         super.viewDidLoad()
