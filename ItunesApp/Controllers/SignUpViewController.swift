@@ -115,14 +115,16 @@ class SignUpViewController: UIViewController {
     }()
     
     private lazy var signUpButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .black
-        button.setTitle("SignUP", for: .normal)
-        button.tintColor = .white
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+        var attributes = AttributeContainer()
+        attributes.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        var buttonConfiguration = UIButton.Configuration.filled()
+        buttonConfiguration.attributedTitle = AttributedString("SignUP", attributes: attributes)
+        //        buttonConfiguration.baseBackgroundColor = .black
+        
+        return UIButton(configuration: buttonConfiguration, primaryAction: UIAction {_ in
+            print("SignUpTap")
+        })
     }()
     
     private var elementsStackView = UIStackView()
@@ -182,10 +184,6 @@ class SignUpViewController: UIViewController {
         datePicker.layer.cornerRadius = 6
         datePicker.tintColor = .black
     }
-    
-    @objc private func signUpButtonTapped() {
-        print("SignUpTap")
-    }
 }
 
 // MARK: - UITextFieldDelegate
@@ -240,6 +238,8 @@ extension SignUpViewController {
             loginLabel.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
             loginLabel.bottomAnchor.constraint(equalTo: elementsStackView.topAnchor, constant: -30)
         ])
+        
+        signUpButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             signUpButton.centerXAnchor.constraint(equalTo: backgroundView.centerXAnchor),
