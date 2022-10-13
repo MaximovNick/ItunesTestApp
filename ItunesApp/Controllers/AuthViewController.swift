@@ -45,26 +45,27 @@ class AuthViewController: UIViewController {
         return textField
     }()
     
-    private let signUpButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
-        button.setTitle("SignUp", for: .normal)
-        button.layer.cornerRadius = 10
-        button.tintColor = .white
-        button.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+    private lazy var signUpButton: UIButton = {
+        createButton(
+            withTitle: "SignUP",
+            andColor: UIColor(
+                red: 79/255,
+                green: 4/255,
+                blue: 33/255,
+                alpha: 1
+            ),
+            action: UIAction { _ in
+                self.present(SignUpViewController(), animated: true)
+            })
     }()
     
-    private let signInButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .black
-        button.setTitle("SignIn", for: .normal)
-        button.tintColor = .white
-        button.layer.cornerRadius = 10
-        button.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
+    private lazy var signInButton: UIButton = {
+        createButton(
+            withTitle: "SignIn",
+            andColor: .black,
+            action: UIAction { _ in
+                self.navigationController?.pushViewController(AlbumsViewController(), animated: true)
+            })
     }()
     
     private var textFieldsStackView = UIStackView()
@@ -76,6 +77,17 @@ class AuthViewController: UIViewController {
         setupViews()
         setupDelegate()
         setConstraints()
+    }
+    
+    private func createButton(withTitle title: String, andColor color: UIColor, action: UIAction) -> UIButton {
+        var attributes = AttributeContainer()
+        attributes.font = UIFont.boldSystemFont(ofSize: 18)
+        
+        var buttonConfiguration = UIButton.Configuration.filled()
+        buttonConfiguration.baseBackgroundColor = color
+        buttonConfiguration.attributedTitle = AttributedString(title, attributes: attributes)
+        
+        return UIButton(configuration: buttonConfiguration, primaryAction: action)
     }
     
     private func setupViews() {
@@ -102,17 +114,6 @@ class AuthViewController: UIViewController {
     private func setupDelegate() {
         emailTextField.delegate = self
         passwordTextField.delegate = self
-    }
-    
-    @objc func signUpButtonTapped() {
-        let signUPViewController = SignUpViewController()
-        self.present(signUPViewController, animated: true)
-    }
-    
-    @objc func signInButtonTapped() {
-        let navigationVC = UINavigationController(rootViewController: AlbumsViewController())
-        navigationVC.modalPresentationStyle = .fullScreen
-        self.present(navigationVC, animated: true)
     }
 }
 
