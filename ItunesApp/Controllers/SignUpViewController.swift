@@ -22,11 +22,8 @@ class SignUpViewController: UIViewController {
         return view
     }()
     
-    private var loginLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Registration"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var loginLabel: UILabel = {
+        createLabel(withTitle: "Registration", ofSize: 18)
     }()
     
     private var firstNameTextField: UITextField = {
@@ -36,12 +33,8 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private var firstNameValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required filed"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var firstNameValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
     private var secondNameTextField: UITextField = {
@@ -51,20 +44,12 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private var secondNameValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var secondNameValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
-    private var ageValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var ageValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
     private var phoneNumberTextField: UITextField = {
@@ -75,12 +60,8 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private var phoneValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var phoneValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
     private var emailTextField: UITextField = {
@@ -90,12 +71,8 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private var emailValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var emailValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
     private var passwordTextField: UITextField = {
@@ -106,12 +83,8 @@ class SignUpViewController: UIViewController {
         return textField
     }()
     
-    private var passwordValidLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Required field"
-        label.font = UIFont.systemFont(ofSize: 14)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    private lazy var passwordValidLabel: UILabel = {
+        createLabel(withTitle: "Required filed", ofSize: 14)
     }()
     
     private lazy var signUpButton: UIButton = {
@@ -137,6 +110,14 @@ class SignUpViewController: UIViewController {
         setConstraints()
         setupDelegate()
         setupDatePicker()
+    }
+    
+    private func createLabel(withTitle title: String, ofSize size: CGFloat) -> UILabel {
+        let label = UILabel()
+        label.text = title
+        label.font = UIFont.systemFont(ofSize: size)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
     }
     
     private func setupViews() {
