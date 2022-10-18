@@ -15,7 +15,7 @@ class MainTabBarViewController: UITabBarController {
         view.backgroundColor = .white
         
         let musicVC     = UINavigationController(rootViewController: MusicViewController())
-        let movieVC     = UINavigationController(rootViewController: MusicViewController())
+        let movieVC     = UINavigationController(rootViewController: MovieViewController())
         let searchVC    = UINavigationController(rootViewController: SearchViewController())
         let soundVC     = UINavigationController(rootViewController: SoundViewController())
         let moreVC      = UINavigationController(rootViewController: MoreViewController())
