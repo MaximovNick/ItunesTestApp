@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD168B4228FC7D0F007E63A6 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4128FC7D0F007E63A6 /* MainTabBarViewController.swift */; };
+		AD168B4528FC7DF1007E63A6 /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4428FC7DF1007E63A6 /* MusicViewController.swift */; };
+		AD168B4728FC7E03007E63A6 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4628FC7E03007E63A6 /* MovieViewController.swift */; };
+		AD168B4928FC7E1A007E63A6 /* SeachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4828FC7E1A007E63A6 /* SeachViewController.swift */; };
+		AD168B4B28FC7E2A007E63A6 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4A28FC7E2A007E63A6 /* SoundViewController.swift */; };
+		AD168B4D28FC7E36007E63A6 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD168B4C28FC7E36007E63A6 /* MoreViewController.swift */; };
 		AD40BA3928C2022100B191B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA3828C2022100B191B0 /* AppDelegate.swift */; };
 		AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */; };
 		AD40BA4228C2022200B191B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD40BA4128C2022200B191B0 /* Assets.xcassets */; };
@@ -20,9 +26,17 @@
 		AD40BA5E28C25C5A00B191B0 /* DetailAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5D28C25C5A00B191B0 /* DetailAlbumViewController.swift */; };
 		AD40BA6028C2664F00B191B0 /* SongsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */; };
 		AD40BA6228C2690C00B191B0 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD40BA6128C2690C00B191B0 /* UserInfoViewController.swift */; };
+		ADE2041728FF29C9007F92F6 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2041628FF29C9007F92F6 /* CollectionViewTableViewCell.swift */; };
+		ADE2041928FF3022007F92F6 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADE2041828FF3022007F92F6 /* TitleCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD168B4128FC7D0F007E63A6 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		AD168B4428FC7DF1007E63A6 /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
+		AD168B4628FC7E03007E63A6 /* MovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+		AD168B4828FC7E1A007E63A6 /* SeachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeachViewController.swift; sourceTree = "<group>"; };
+		AD168B4A28FC7E2A007E63A6 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		AD168B4C28FC7E36007E63A6 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		AD40BA3528C2022100B191B0 /* ItunesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD40BA3828C2022100B191B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD40BA3A28C2022100B191B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +52,8 @@
 		AD40BA5D28C25C5A00B191B0 /* DetailAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlbumViewController.swift; sourceTree = "<group>"; };
 		AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AD40BA6128C2690C00B191B0 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		ADE2041628FF29C9007F92F6 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		ADE2041828FF3022007F92F6 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD168B4328FC7DA5007E63A6 /* TabBarControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ADE2041528FF28AC007F92F6 /* Cells */,
+				AD168B4128FC7D0F007E63A6 /* MainTabBarViewController.swift */,
+				AD168B4428FC7DF1007E63A6 /* MusicViewController.swift */,
+				AD168B4628FC7E03007E63A6 /* MovieViewController.swift */,
+				AD168B4828FC7E1A007E63A6 /* SeachViewController.swift */,
+				AD168B4A28FC7E2A007E63A6 /* SoundViewController.swift */,
+				AD168B4C28FC7E36007E63A6 /* MoreViewController.swift */,
+			);
+			path = TabBarControllers;
+			sourceTree = "<group>";
+		};
 		AD40BA2C28C2022100B191B0 = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +102,7 @@
 			children = (
 				AD40BA4F28C2135300B191B0 /* Extensions */,
 				AD40BA4E28C202EC00B191B0 /* Application */,
+				AD168B4328FC7DA5007E63A6 /* TabBarControllers */,
 				AD40BA5328C221D200B191B0 /* Controllers */,
 				AD40BA4128C2022200B191B0 /* Assets.xcassets */,
 				AD40BA4328C2022200B191B0 /* LaunchScreen.storyboard */,
@@ -124,6 +155,15 @@
 			children = (
 				AD40BA5B28C254A100B191B0 /* AlbumsTableViewCell.swift */,
 				AD40BA5F28C2664F00B191B0 /* SongsCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		ADE2041528FF28AC007F92F6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ADE2041628FF29C9007F92F6 /* CollectionViewTableViewCell.swift */,
+				ADE2041828FF3022007F92F6 /* TitleCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -199,14 +239,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD40BA3928C2022100B191B0 /* AppDelegate.swift in Sources */,
+				AD168B4728FC7E03007E63A6 /* MovieViewController.swift in Sources */,
 				AD40BA4D28C2028700B191B0 /* AuthViewController.swift in Sources */,
+				ADE2041728FF29C9007F92F6 /* CollectionViewTableViewCell.swift in Sources */,
 				AD40BA5728C24D6C00B191B0 /* AlbumsViewController.swift in Sources */,
 				AD40BA6028C2664F00B191B0 /* SongsCollectionViewCell.swift in Sources */,
 				AD40BA5C28C254A100B191B0 /* AlbumsTableViewCell.swift in Sources */,
+				AD168B4D28FC7E36007E63A6 /* MoreViewController.swift in Sources */,
 				AD40BA6228C2690C00B191B0 /* UserInfoViewController.swift in Sources */,
 				AD40BA5E28C25C5A00B191B0 /* DetailAlbumViewController.swift in Sources */,
+				AD168B4928FC7E1A007E63A6 /* SeachViewController.swift in Sources */,
 				AD40BA5928C2505A00B191B0 /* UIViewController + Extension.swift in Sources */,
 				AD40BA3B28C2022100B191B0 /* SceneDelegate.swift in Sources */,
+				AD168B4528FC7DF1007E63A6 /* MusicViewController.swift in Sources */,
+				AD168B4B28FC7E2A007E63A6 /* SoundViewController.swift in Sources */,
+				ADE2041928FF3022007F92F6 /* TitleCollectionViewCell.swift in Sources */,
+				AD168B4228FC7D0F007E63A6 /* MainTabBarViewController.swift in Sources */,
 				AD40BA5228C2139E00B191B0 /* UIStackView + Extension.swift in Sources */,
 				AD40BA5528C221EF00B191B0 /* SignUpViewController.swift in Sources */,
 			);
