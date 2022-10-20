@@ -10,8 +10,8 @@ import UIKit
 class MusicViewController: UIViewController {
     
     let sectionsTitles: [String] = ["", "Топ-альбомы", "", "Только хиты", "Предзаказы",
-                              "Популярные рок-альбомы", "Популярные поп-альбомы",
-                              "Популярные хип-хоп-альбомы"]
+                                    "Популярные рок-альбомы", "Популярные поп-альбомы",
+                                    "Популярные хип-хоп-альбомы"]
     
     private let headerView: UIView = {
         let view = UIView()
@@ -26,7 +26,7 @@ class MusicViewController: UIViewController {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         return tableView
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,18 +41,30 @@ class MusicViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-//        tableView.frame = view.bounds
+        
         tableView.rowHeight = 70
+        
+        if #available(iOS 16.0, *) {
+            navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", image: UIImage(systemName: "list.bullet"), target: self, action: #selector(newViewVC))
+        } else {
+            // Fallback on earlier versions
+        }
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Жанры", style: .plain, target: self, action: #selector(newViewVC))
+        
+      
     }
     
-
+    @objc func newViewVC() {
+      
+        present(GenreViewController(), animated: true)
+    }
 }
 
 extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        sectionsTitles.count
-//    }
+    //    func numberOfSections(in tableView: UITableView) -> Int {
+    //        sectionsTitles.count
+    //    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         sectionsTitles.count
@@ -61,7 +73,7 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
         
-   
+        
         return cell
     }
     
@@ -69,9 +81,9 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
         return sectionsTitles[section]
     }
     
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        
-//    }
+    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //
+    //    }
     
 }
 
