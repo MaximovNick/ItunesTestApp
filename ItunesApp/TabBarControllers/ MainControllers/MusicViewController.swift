@@ -27,8 +27,17 @@ class MusicViewController: UIViewController {
         return tableView
     }()
     
+    private let segmentedControl: UISegmentedControl = {
+       let segmentedControl = UISegmentedControl(items: ["Подборка", "Чарты"])
+        
+        return segmentedControl
+        
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.titleView = segmentedControl
         
         view.addSubview(headerView)
         view.addSubview(tableView)
