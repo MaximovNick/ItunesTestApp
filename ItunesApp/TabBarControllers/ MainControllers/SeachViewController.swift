@@ -1,5 +1,5 @@
 //
-//  MoreViewController.swift
+//  SearchViewController.swift
 //  ItunesApp
 //
 //  Created by Nikolai Maksimov on 16.10.2022.
@@ -7,14 +7,13 @@
 
 import UIKit
 
-class MoreViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-       
+      
     }
     
-
 
 }
