@@ -11,11 +11,19 @@ class CollectionViewTableViewCell: UITableViewCell {
 
  static let identifier = "TableViewCell"
     
+     let titleLabel: UILabel = {
+       let label = UILabel()
+        label.text = "Title"
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.register(TitleCollectionViewCell.self, forCellWithReuseIdentifier: TitleCollectionViewCell.identifier)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
     }()
     
@@ -23,11 +31,16 @@ class CollectionViewTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         contentView.addSubview(collectionView)
+        contentView.addSubview(titleLabel)
         
         collectionView.delegate = self
         collectionView.dataSource = self
         
+        
+        
         collectionView.showsHorizontalScrollIndicator = false
+        
+        setConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -36,7 +49,7 @@ class CollectionViewTableViewCell: UITableViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        collectionView.frame = contentView.bounds
+       
     }
     
 }
@@ -53,5 +66,22 @@ extension CollectionViewTableViewCell: UICollectionViewDelegate, UICollectionVie
         return cell
     }
     
+}
+
+extension CollectionViewTableViewCell {
     
+    private func setConstraints() {
+        
+        NSLayoutConstraint.activate([
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            titleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+        ])
+        
+        NSLayoutConstraint.activate([
+            collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 5),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+            collectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -10),
+        ])
+    }
 }
