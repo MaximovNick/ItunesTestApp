@@ -7,9 +7,19 @@
 
 import UIKit
 
+enum Sections: Int {
+    case TopAlbums = 0
+    case Empty = 1
+    case JustHits = 2
+    case Preorders = 3
+    case PopularRockAlbums = 4
+    case PopularPopAlbums = 5
+    case PopularHipHopAlbums = 6
+}
+
 class MusicViewController: UIViewController {
     
-    let sectionsTitles: [String] = ["", "Топ-альбомы", "", "Только хиты", "Предзаказы",
+    let sectionsTitles: [String] = ["Топ-альбомы", "", "Только хиты", "Предзаказы",
                                     "Популярные рок-альбомы", "Популярные поп-альбомы",
                                     "Популярные хип-хоп-альбомы"]
     
@@ -28,7 +38,7 @@ class MusicViewController: UIViewController {
     }()
     
     private let segmentedControl: UISegmentedControl = {
-       let segmentedControl = UISegmentedControl(items: ["Подборка", "Чарты"])
+        let segmentedControl = UISegmentedControl(items: ["Подборка", "Чарты"])
         
         return segmentedControl
         
@@ -38,9 +48,11 @@ class MusicViewController: UIViewController {
         super.viewDidLoad()
         
         navigationItem.titleView = segmentedControl
-        
+   
         view.addSubview(headerView)
         view.addSubview(tableView)
+        
+  
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -51,7 +63,7 @@ class MusicViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        tableView.rowHeight = 70
+        tableView.rowHeight = 120
         
         if #available(iOS 16.0, *) {
             navigationItem.rightBarButtonItem = UIBarButtonItem(title: "", image: UIImage(systemName: "list.bullet"), target: self, action: #selector(newViewVC))
@@ -59,40 +71,30 @@ class MusicViewController: UIViewController {
             // Fallback on earlier versions
         }
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Жанры", style: .plain, target: self, action: #selector(newViewVC))
-        
-      
     }
     
     @objc func newViewVC() {
-      
         present(GenreViewController(), animated: true)
     }
 }
 
 extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
     
-    //    func numberOfSections(in tableView: UITableView) -> Int {
-    //        sectionsTitles.count
-    //    }
+        func numberOfSections(in tableView: UITableView) -> Int {
+            sectionsTitles.count
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        sectionsTitles.count
+        1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
         
+        cell.titleLabel.text = sectionsTitles[indexPath.row]
         
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionsTitles[section]
-    }
-    
-    //    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    //
-    //    }
     
 }
 
