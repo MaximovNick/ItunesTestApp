@@ -11,35 +11,30 @@ class TitleCollectionViewCell: UICollectionViewCell {
     static let identifier = "TitleViewCell"
     
     private let posterImageView: UIImageView = {
-       let imageView = UIImageView()
+        let imageView = UIImageView()
         imageView.backgroundColor = .red
         return imageView
     }()
     
     private let trackTitleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Название трека"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    
     private let artistTitleLabel: UILabel = {
-       let label = UILabel()
+        let label = UILabel()
         label.text = "Имя артиста"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.addSubview(posterImageView)
         addSubview(trackTitleLabel)
         addSubview(artistTitleLabel)
-        
-        
-        
     }
     
     required init?(coder: NSCoder) {
