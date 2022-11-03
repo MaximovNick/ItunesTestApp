@@ -91,9 +91,25 @@ extension MusicViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: CollectionViewTableViewCell.identifier, for: indexPath) as? CollectionViewTableViewCell else { return UITableViewCell() }
         
-        cell.titleLabel.text = sectionsTitles[indexPath.row]
+        let title = sectionsTitles[indexPath.row]
+        
+        cell.titleLabel.text = title
+        
+   
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
+        
+        guard let header = view as? UITableViewHeaderFooterView else { return }
+        
+        let sectionTitle = sectionsTitles[section]
+        
+        var content = header.defaultContentConfiguration()
+        content.text = sectionTitle
+        content.textProperties.color = UIColor.black
+        header.contentConfiguration = content
     }
     
 }
