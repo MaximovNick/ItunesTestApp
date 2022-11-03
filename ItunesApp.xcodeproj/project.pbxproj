@@ -54,7 +54,7 @@
 		AD168B4328FC7DA5007E63A6 /* TabBarControllers */ = {
 			isa = PBXGroup;
 			children = (
-				AD7B6EBA2901C54000DE9CD6 /* AuxiliaryControllers */,
+				AD7B6EBA2901C54000DE9CD6 /* Views */,
 				ADE2041528FF28AC007F92F6 /* Cells */,
 				AD7B6EB92901C51600DE9CD6 /*  MainControllers */,
 			);
@@ -111,12 +111,12 @@
 			path = " MainControllers";
 			sourceTree = "<group>";
 		};
-		AD7B6EBA2901C54000DE9CD6 /* AuxiliaryControllers */ = {
+		AD7B6EBA2901C54000DE9CD6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				AD7B6EBB2901C5A700DE9CD6 /* GenreViewController.swift */,
 			);
-			path = AuxiliaryControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ADE2041528FF28AC007F92F6 /* Cells */ = {

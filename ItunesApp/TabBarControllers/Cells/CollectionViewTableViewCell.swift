@@ -8,18 +8,18 @@
 import UIKit
 
 class CollectionViewTableViewCell: UITableViewCell {
-
- static let identifier = "TableViewCell"
     
-     let titleLabel: UILabel = {
-       let label = UILabel()
+    static let identifier = "TableViewCell"
+    
+    let titleLabel: UILabel = {
+        let label = UILabel()
         label.text = "Title"
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     private lazy var showAllAlbumsButton: UIButton = {
-       var attributes = AttributeContainer()
+        var attributes = AttributeContainer()
         attributes.font = UIFont.systemFont(ofSize: 12)
         
         var buttonConfiguration = UIButton.Configuration.borderless()
